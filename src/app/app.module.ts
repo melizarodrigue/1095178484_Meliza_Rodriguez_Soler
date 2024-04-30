@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,7 +9,6 @@ import { CardProductComponent } from './components/card-product/card-product.com
 import { HeaderComponent } from './components/header/header.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { AboutComponent } from './components/about/about.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
@@ -17,14 +18,18 @@ import { LoginComponent } from './components/login/login.component';
     HeaderComponent,
     CatalogoComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+
+  
 })
 export class AppModule { }
+

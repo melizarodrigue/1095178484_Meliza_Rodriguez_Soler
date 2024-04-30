@@ -1,34 +1,71 @@
-/* Estilos para el formulario */
-form {
-  width: 300px; /* Ancho del formulario */
-  margin: 0 auto; /* Centrar el formulario */
-  text-align: center; /* Centrar el texto dentro del formulario */
-}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 
-/* Estilos para los campos de entrada */
-input[type="email"],
-input[type="password"] {
-  width: 100%; /* Ancho completo */
-  padding: 10px; /* Espaciado interno */
-  margin-bottom: 10px; /* Espaciado inferior */
-  border: 1px solid #ccc; /* Borde */
-  border-radius: 5px; /* Bordes redondeados */
-  box-sizing: border-box; /* Incluir el padding y border en el ancho total */
-}
+  .login-form {
+    max-width: 300px;
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
-/* Estilos para el botón */
-button[type="submit"] {
-  width: 100%; /* Ancho completo */
-  padding: 10px; /* Espaciado interno */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  background-color: #ae00ff; /* Color de fondo */
-  color: white; /* Color del texto */
-  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
-}
+    .form-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000;
+    }
 
-/* Estilos para el botón cuando está desactivado */
-button[type="submit"]:disabled {
-  background-color: #cccccc; /* Cambiar color de fondo */
-  cursor: not-allowed; /* Cambiar cursor */
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #3330d0;
+      }
+
+      input {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      input:focus {
+        outline: none; /* Quita el contorno predeterminado */
+        border-bottom: 2px solid rgb(199, 114, 255); /* Cambia el borde inferior */
+        box-shadow: 0px 0px 5px rgba(199, 114, 255, 0.5); /* Agrega una sombra */
+      }
+    }
+
+    button {
+      width: 100%;
+      margin: 20px 0;
+      padding: 15px;
+      color: #fff;
+      background-color: #2b4ece;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #bc8ad8;
+    }
+  }
+  .error-message {
+    color: red;
+  }
+
+  .success-message {
+    color: green;
+  }
 }
